@@ -4,7 +4,7 @@
 
 # Sobre o Projeto
 
-O Projeto consiste em construir uma API que suporte o processo de abertura de conta no banco. Nele precisamos tratar resposta que nossos sistema deve retornar em caso de
+O Projeto consiste em construir uma API que suporte o processo de abertura de conta no banco. Nele precisamos tratar resposta que nosso sistema deve retornar em caso de
 sucesso ou falha. O sistema também fornece tratamento de exceções personalizadas e criação de validações customizadas.
 
 ## Tecnologias utilizadas
@@ -21,7 +21,7 @@ sucesso ou falha. O sistema também fornece tratamento de exceções personaliza
   git clone https://github.com/Jefferson-bit/DS-MovieFlix.git
   
   # Entre na pasta do projeto
-  
+  cd OTClient
   # Execute o projeto
   ./mvnw spring-boot:run
   
