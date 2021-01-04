@@ -9,7 +9,6 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.crash.dto.PersonDTO;
-import com.crash.entity.Person;
 import com.crash.repositories.PersonRepository;
 import com.crash.resources.exceptions.FieldMessage;
 
@@ -17,19 +16,22 @@ public class PersonInsertValidator implements ConstraintValidator<PersonInsertVa
 	
 	@Autowired
 	private PersonRepository repository;
-	
+		
 	@Override
 	public void initialize(PersonInsertValid ann) {
 	}
-
+	
 	@Override
 	public boolean isValid(PersonDTO dto, ConstraintValidatorContext context) {
 		
 		List<FieldMessage> list = new ArrayList<>();
-		
-		Person user = repository.findByEmail(dto.getEmail());
-		if(user != null ) {
+		 
+		if(repository.findByEmail(dto.getEmail()) != null ) {
 			list.add(new FieldMessage("Email", "Email existente"));
+		}
+		
+		if(repository.findByCpf(dto.getCpf()) != null) {
+			list.add(new FieldMessage("Cpf", "CPF existente"));
 		}
 	
 		for (FieldMessage e : list) {
