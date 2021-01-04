@@ -18,7 +18,7 @@ sucesso ou falha. O sistema também fornece tratamento de exceções personaliza
  Pré-Requisitos: Java 11
  ```bash
   # Clone o Projeto
-  git clone https://github.com/Jefferson-bit/DS-MovieFlix.git
+  git clone https://github.com/Jefferson-bit/OT-Client.git
   
   # Entre na pasta do projeto
   cd OTClient
